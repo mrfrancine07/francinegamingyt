@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090b18">
+<title>FRANCINEGAMINGYT | MLBB Top-Up Demo</title>
+<style>
+:root{--bg:#080a16;--panel:#11152a;--panel2:#171c35;--line:#2b3154;--text:#f5f7ff;--muted:#aab2d2;--cyan:#5de4ff;--purple:#9b7bff;--pink:#ff70c7;--green:#6ef0b0}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% -10%,#25205b 0,transparent 38%),radial-gradient(ellipse at 0 25%,#0d2945 0,transparent 35%),var(--bg);color:var(--text);font:15px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+a{color:var(--cyan)}.wrap{width:min(1120px,92%);margin:auto}.nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0;gap:15px}.brand{font-weight:900;letter-spacing:.06em;font-size:18px}.brand span{color:var(--cyan)}.pill{border:1px solid #5b528f;background:#211b43;color:#d7d0ff;border-radius:99px;padding:7px 12px;font-size:12px;font-weight:800}
+.hero{padding:36px 0 24px;display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center}.eyebrow{color:var(--cyan);text-transform:uppercase;font-size:12px;font-weight:900;letter-spacing:.2em}.hero h1{font-size:clamp(34px,6vw,64px);line-height:1.02;margin:12px 0 18px;letter-spacing:-.04em}.hero h1 em{font-style:normal;background:linear-gradient(90deg,var(--cyan),var(--purple),var(--pink));background-clip:text;color:transparent}.hero p{color:var(--muted);max-width:570px}.hero-art{min-height:220px;border:1px solid #3b4070;border-radius:25px;background:linear-gradient(140deg,#20234d,#10142a 55%,#31184d);display:grid;place-items:center;position:relative;overflow:hidden;box-shadow:0 20px 70px #0006}.orb{width:145px;height:145px;transform:rotate(45deg);border-radius:28px 60px 30px 60px;background:linear-gradient(135deg,#f9ffff,#63dcff 35%,#8275ff 70%,#fa79df);box-shadow:0 0 65px #5de4ff80;position:relative}.orb:after{content:"";position:absolute;inset:23px;border:2px solid #fff9;border-radius:10px 30px 10px 30px}.art-label{position:absolute;bottom:17px;font-size:11px;letter-spacing:.2em;color:#d7dcff;font-weight:900}
+.notice{border:1px solid #69582c;background:#2b2415;color:#ffe5a2;border-radius:12px;padding:12px 15px;margin:12px 0 26px;font-size:13px}.layout{display:grid;grid-template-columns:1fr 330px;gap:22px;align-items:start}.panel{background:#101429eF;border:1px solid var(--line);border-radius:18px;padding:20px;margin-bottom:18px}.panel h2{font-size:18px;margin:0 0 5px}.sub{color:var(--muted);font-size:13px;margin:0 0 18px}.packages{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}.pack{border:1px solid #303657;background:linear-gradient(145deg,#171c36,#11152a);border-radius:14px;padding:15px 12px;text-align:left;color:var(--text);cursor:pointer;min-height:110px;transition:.15s}.pack:hover,.pack.active{border-color:var(--cyan);box-shadow:0 0 0 1px #5de4ff45,inset 0 0 24px #5de4ff0d}.diamond{color:var(--cyan);font-size:13px;font-weight:900}.amount{font-size:23px;font-weight:900;display:block;margin:4px 0}.price{color:#d2d8f2;font-size:13px}.tag{display:inline-block;color:#bcaaff;font-size:10px;margin-top:7px;text-transform:uppercase;letter-spacing:.08em}
+label{display:block;font-size:13px;font-weight:750;margin:14px 0 7px}input{width:100%;background:#090d1d;border:1px solid #303657;border-radius:10px;padding:13px;color:white;font:inherit;outline:none}input:focus{border-color:var(--cyan)}.hint{font-size:12px;color:var(--muted);margin-top:6px}.payopts{display:grid;grid-template-columns:1fr 1fr;gap:10px}.payopt{border:1px solid #303657;border-radius:10px;padding:12px;background:#0b1021;color:var(--text);cursor:pointer;text-align:center}.payopt.active{border-color:var(--purple);background:#211b43}.primary{width:100%;border:0;border-radius:11px;padding:14px 16px;background:linear-gradient(90deg,#40dfff,#9a7cff);color:#090b18;font-size:15px;font-weight:950;cursor:pointer;margin-top:16px}.primary:hover{filter:brightness(1.08)}.summary-row{display:flex;justify-content:space-between;gap:12px;padding:9px 0;color:var(--muted);font-size:13px}.summary-row strong{color:var(--text)}.total{border-top:1px solid var(--line);margin-top:7px;padding-top:14px;font-size:16px}.status{display:none;margin-top:14px;border:1px solid #326f5c;background:#102a25;border-radius:12px;padding:14px;color:#b7ffdf;font-size:13px;white-space:pre-line}.status.show{display:block}.side-note{color:var(--muted);font-size:12px;margin-top:14px}.footer{border-top:1px solid #252b49;margin-top:28px;padding:22px 0 34px;color:var(--muted);font-size:12px}.footer strong{color:#e5e9ff}.steps{list-style:none;padding:0;margin:15px 0}.steps li{display:flex;gap:10px;margin:13px 0;color:var(--muted);font-size:13px}.num{flex:none;width:25px;height:25px;border-radius:8px;background:#202647;color:var(--cyan);display:grid;place-items:center;font-weight:900}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:22px}.hero-art{min-height:170px}.layout{grid-template-columns:1fr}.packages{grid-template-columns:repeat(2,1fr)}.nav{align-items:flex-start;flex-direction:column}.panel{padding:16px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="nav"><div class="brand">FRANCINE<span>GAMINGYT</span></div><div class="pill">DEMO STORE · NO REAL PAYMENTS</div></header>
+<section class="hero">
+<div><div class="eyebrow">MLBB • DIAMOND TOP-UP</div><h1>POWER UP.<br><em>PLAY YOUR WAY.</em></h1><p>A sleek, mobile-friendly MLBB top-up storefront concept. Choose a demo package, enter your game details, and preview the checkout flow.</p></div>
+<div class="hero-art" aria-label="Decorative glowing diamond illustration"><div class="orb"></div><div class="art-label">FRANCINEGAMINGYT • TOP-UP</div></div>
+</section>
+<div class="notice"><strong>DEMO MODE:</strong> This page does not collect money or deliver diamonds. Prices and packages are sample values for testing the design only.</div>
+<div class="layout">
+<main>
+<section class="panel"><h2>01 / Select a package</h2><p class="sub">Choose a sample package to see the checkout total.</p>
+<div class="packages" id="packages">
+<button class="pack active" data-diamonds="86" data-price="99"><span class="diamond">◆ DIAMONDS</span><span class="amount">86</span><span class="price">₹99 · sample</span><span class="tag">Starter</span></button>
+<button class="pack" data-diamonds="172" data-price="199"><span class="diamond">◆ DIAMONDS</span><span class="amount">172</span><span class="price">₹199 · sample</span><span class="tag">Popular</span></button>
+<button class="pack" data-diamonds="257" data-price="299"><span class="diamond">◆ DIAMONDS</span><span class="amount">257</span><span class="price">₹299 · sample</span><span class="tag">Value</span></button>
+<button class="pack" data-diamonds="344" data-price="399"><span class="diamond">◆ DIAMONDS</span><span class="amount">344</span><span class="price">₹399 · sample</span><span class="tag">Boost</span></button>
+<button class="pack" data-diamonds="514" data-price="599"><span class="diamond">◆ DIAMONDS</span><span class="amount">514</span><span class="price">₹599 · sample</span><span class="tag">Pro</span></button>
+<button class="pack" data-diamonds="Weekly Pass" data-price="149"><span class="diamond">◆ PASS</span><span class="amount" style="font-size:19px">Weekly</span><span class="price">₹149 · sample</span><span class="tag">Pass</span></button>
+</div></section>
+<section class="panel"><h2>02 / Player details</h2><p class="sub">Enter your in-game ID for this local demo. Never enter your game password.</p>
+<label for="player">MLBB Player ID</label><input id="player" inputmode="numeric" maxlength="20" placeholder="e.g. 123456789">
+<label for="zone">Zone / Server ID</label><input id="zone" inputmode="numeric" maxlength="10" placeholder="e.g. 1234">
+<div class="hint">This demo only checks that the fields are filled. It cannot verify a real player account.</div>
+</section>
+<section class="panel"><h2>03 / Checkout preview</h2><p class="sub">Pick a test option. No payment provider is connected.</p>
+<div class="payopts"><button class="payopt active" data-pay="UPI (demo)">UPI · Demo</button><button class="payopt" data-pay="Card (demo)">Card · Demo</button></div>
+<button class="primary" id="orderBtn">Create demo order →</button>
+<div class="status" id="status" role="status" aria-live="polite"></div>
+</section>
+</main>
+<aside>
+<section class="panel"><h2>Order summary</h2><p class="sub">Your current selection</p>
+<div class="summary-row"><span>Package</span><strong id="sumPack">86 Diamonds</strong></div>
+<div class="summary-row"><span>Payment</span><strong id="sumPay">UPI (demo)</strong></div>
+<div class="summary-row total"><span>Sample total</span><strong id="sumPrice">₹99</strong></div>
+<p class="side-note">Sample prices are not live market prices. Confirm supplier costs before setting real prices.</p></section>
+<section class="panel"><h2>How real delivery works</h2><ul class="steps"><li><span class="num">1</span><span>Customer pays through an approved payment gateway.</span></li><li><span class="num">2</span><span>Your backend verifies payment with the gateway.</span></li><li><span class="num">3</span><span>An authorized supplier API processes the top-up.</span></li><li><span class="num">4</span><span>Your server stores the supplier result and updates order status.</span></li></ul><div class="hint">Automatic delivery needs a legitimate supplier contract/API and secure server-side code.</div></section>
+</aside>
+</div>
+<footer class="footer"><strong>FRANCINEGAMINGYT</strong> · Unofficial demonstration storefront. Not affiliated with or endorsed by Moonton. No real payment, account login, or diamond delivery is available on this page.</footer>
+</div>
+<script>
+let selected={diamonds:"86",price:99};let payment="UPI (demo)";
+const $=id=>document.getElementById(id);
+document.querySelectorAll(".pack").forEach(btn=>btn.addEventListener("click",()=>{
+ document.querySelectorAll(".pack").forEach(b=>b.classList.remove("active"));btn.classList.add("active");
+ selected={diamonds:btn.dataset.diamonds,price:Number(btn.dataset.price)};
+ $("sumPack").textContent=selected.diamonds==="Weekly Pass"?"Weekly Pass":selected.diamonds+" Diamonds";
+ $("sumPrice").textContent="₹"+selected.price;
+}));
+document.querySelectorAll(".payopt").forEach(btn=>btn.addEventListener("click",()=>{
+ document.querySelectorAll(".payopt").forEach(b=>b.classList.remove("active"));btn.classList.add("active");payment=btn.dataset.pay;$("sumPay").textContent=payment;
+}));
+$("orderBtn").addEventListener("click",()=>{
+ const player=$("player").value.trim(),zone=$("zone").value.trim(),status=$("status");
+ status.classList.add("show");
+ if(!/^\d{4,20}$/.test(player)||!/^\d{1,10}$/.test(zone)){
+  status.textContent="Please enter a numeric Player ID (at least 4 digits) and a numeric Zone / Server ID. This is demo validation only.";return;
+ }
+ const id="FG-DEMO-"+Math.random().toString(36).slice(2,8).toUpperCase();
+ status.textContent="✓ Demo order created\nOrder ID: "+id+"\nPackage: "+selected.diamonds+"\nPlayer ID: "+player+" ("+zone+")\nPayment: "+payment+"\nTotal: ₹"+selected.price+"\n\nNo money was charged. No diamonds were sent. This order exists only in this browser session.";
+});
+</script>
+</body>
+</html>
